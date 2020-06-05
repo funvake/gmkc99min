@@ -1,0 +1,23 @@
+# A Workflow destined to be deleted (once it works)
+
+name: GitHub Actions Demo
+on:
+  push:
+    branches: [ master ]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Run a one-line script
+      env:
+        CC: gcc
+        CXX: g++
+        EXE: hello  
+      run: echo $CC -Wall -Wextra -std=c99 -o $EXE main.c
+    - name: Run a multi-line script
+      run: |
+        echo Attempting a compile...
+        make clean all RELEASE=1
