@@ -1,6 +1,6 @@
 # A Workflow destined to be deleted (once it works)
 
-name: GitHub Actions Demo
+name: Build Release Program
 on:
   push:
     branches: [ master ]
@@ -25,6 +25,5 @@ jobs:
         make all RELEASE=1
     - name: Move executable
       uses: actions/upload-artifact@master
-      with:
         name: bin
         output: bin
