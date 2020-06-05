@@ -10,6 +10,5 @@
 int main (int argc, char* argv[]) {
    printf("%s #args: %d\n", argv[0], argc);
    printf("Hello, World!\n");
-   printf("Terminating...\n");
    return 0;
    }

@@ -20,4 +20,10 @@ jobs:
     - name: Run a multi-line script
       run: |
         echo Attempting a compile...
-        make clean all RELEASE=1
+        make all RELEASE=1
+        mkdir bin
+    - name: Move executable
+      uses: actions/upload-artifact@master
+      with:
+        name: bin
+        output: bin
