@@ -25,5 +25,5 @@ jobs:
         make all RELEASE=1
     - name: Move executable
       uses: actions/upload-artifact@master
-        name: bin
-        output: bin
+      with:
+          path: bin
