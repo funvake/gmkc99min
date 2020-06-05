@@ -30,9 +30,10 @@ else
 endif
 
 ifeq ($(THEOS),Windows)
-   PROG := $(PROG).exe
+   PROG := bin\\$(PROG).exe
    RMCMD := cmd /c del $(PROG) $(OBJS) 2>NUL:
 else
+   PROG := bin/$(PROG)
    RMCMD := rm $(PROG) $(OBJS) 2>/dev/null || true
 endif
 
