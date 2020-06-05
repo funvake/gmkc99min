@@ -7,7 +7,8 @@
 */
 #include <stdio.h>
 
-int main (void) {
+int main (int argc, char* argv[]) {
+   printf("%s #args: %d\n", argv[0], argc);
    printf("Hello, World!\n");
    return 0;
    }
