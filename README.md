@@ -1,7 +1,7 @@
 # hello
 
 Temporary starter/learning repository, in order to get to grips
-with ''git'' and **GitHub** on Mac OS X.
+with `git` and **GitHub** on macOS, Linux and Windows.
 
 ## C89/C99 Hello World
 
