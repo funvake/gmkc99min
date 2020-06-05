@@ -15,13 +15,14 @@ jobs:
       env:
         CC: gcc
         CXX: g++
-        EXE: hello  
-      run: echo $CC -Wall -Wextra -std=c99 -o $EXE main.c
+        EXE: bin/hello  
+      run: |
+        echo $CC -Wall -Wextra -std=c99 -o $EXE main.c
     - name: Run a multi-line script
       run: |
         echo Attempting a compile...
-        make all RELEASE=1
         mkdir bin
+        make all RELEASE=1
     - name: Move executable
       uses: actions/upload-artifact@master
       with:
