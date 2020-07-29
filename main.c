@@ -9,7 +9,10 @@
 
 int main (int argc, char* argv[]) {
    printf("%s #args: %d\n", argv[0], argc);
-   printf("Hello, World!\n");
+   if (argv[1])
+      printf("Hello, %s!\n", argv[1]);
+   else
+      printf("Hello, World!\n");
    printf("Terminating...\n");
    return 0;
    }
