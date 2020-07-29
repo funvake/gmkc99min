@@ -52,11 +52,16 @@ endif
 %.o: %.c
 	$(CC) $(CPPFLAGS) $(CFLAGS) -c -o $@ $<
 
+# ensure `./bin` directory exists.
+#
+bin:
+	mkdir ./bin
+
 # this rule specifies that the program executable, is dependend on
 # the list of object files in `$(OBJS)`, and the commands to execute
 # when it is out of date, is to peforming the “link” command.
 #
-$(PROG): $(OBJS)
+$(PROG): $(OBJS) bin
 	$(CC) $(CFLAGS) -o $@ $(OBJS) $(LDFLAGS)
 
 .PHONY: all clean
