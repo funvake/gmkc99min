@@ -66,8 +66,7 @@ $(PROG): $(OBJS) bin
 
 .PHONY: all clean
 
-# also clean preprocessed and assembler files, just in case. checks
-# if running on Windows (only OS that has `ALLUSERSPROFILE` as standard).
+# also clean preprocessed and assembler files, just in case.
 clean:
 	-@$(RMCMD)
 
