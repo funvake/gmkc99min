@@ -29,6 +29,7 @@ else
    CFLAGS += -O0 -g2
 endif
 
+# set target executable, and create an os-dependend clean command,
 ifeq ($(THEOS),Windows)
    PROG := bin\\$(PROG).exe
    RMCMD := cmd /c del $(PROG) $(OBJS) 2>NUL:
@@ -66,7 +67,6 @@ $(PROG): $(OBJS) bin
 
 .PHONY: all clean
 
-# also clean preprocessed and assembler files, just in case.
 clean:
 	-@$(RMCMD)
 
